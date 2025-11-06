@@ -1,0 +1,54 @@
+
+<h2>Kalkulator Prosty</h2>
+<form action="post" method="post">
+    <input type="text" name="1" placeholder="Pierwsza Liczba"><br>
+    <input type="text" name="2" placeholder="Druga Liczba"><br>
+    <button type="button" onclick="dodawanie()">dodawanie</button>
+    <button type="button" onclick="odejmowanie()">odejmowanie</button>
+    <button type="button" onclick="mnozenie()">mnozenie</button>
+    <button type="button" onclick="dzielenie()">dzielenie</button>
+    <br>
+    <button type="reset">Wyczyść</button>
+    <p id="wynik"></p>
+</form>
+<script>
+    
+    
+    function dodawanie() {
+        var a = parseFloat(document.getElementsByName("1")[0].value);
+        var b = parseFloat(document.getElementsByName("2")[0].value);
+        var wynik = a + b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+
+
+
+    function odejmowanie() {
+        var a = parseFloat(document.getElementsByName("1")[0].value);
+        var b = parseFloat(document.getElementsByName("2")[0].value);
+        var wynik = a - b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+
+
+
+    function mnozenie() {
+        var a = parseFloat(document.getElementsByName("1")[0].value);
+        var b = parseFloat(document.getElementsByName("2")[0].value);
+        var wynik = a * b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+
+
+
+    function dzielenie() {
+        var a = parseFloat(document.getElementsByName("1")[0].value);
+        var b = parseFloat(document.getElementsByName("2")[0].value);
+        if (b === 0) {
+            document.getElementById("wynik").innerHTML = "Błąd: Dzielenie przez zero!";
+        } else {
+            var wynik = a / b;
+            document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+        }
+    }
+</script>

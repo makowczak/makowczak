@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanko</title>
+</head>
+<body>
+   
+    <style>
+        div,p{border: 1px solid black; padding: 10px; margin: 10px;}
+    </style>
+
+<main>
+    <section id="chat">
+        <div class="message jolanta">
+            <img src="obrazek.jpg" alt="Jolanta Nowak">
+            <p>Cześć idziesz jutro do kina?</p>
+        </div>
+        <div class="message krzysztof">
+            <img src="obrazek.jpg" alt="Krzysztof Łukasiński">
+            <p>Tak! A ty?</p>
+        </div>
+    </section>
+    <section class="inputArea">
+        <form>
+            <label for="messageInput">Wpisz wiadomość:</label>
+            <input type="text" id="messageInput">
+            <button type="button" onclick="sendMessage()">Wyślij</button>
+            <br>
+            <button type="button" onclick="generateRandomReply()">Generuj losową odpowiedź</button>
+        </form>
+    </section>
+</main>
+<script>
+    function sendMessage() {
+        let input = document.getElementById("messageInput").value;
+        let chat = document.getElementById("chat");
+        let newMessage = document.createElement("div");
+        newMessage.classList.add("message", "krzysztof");
+        newMessage.innerHTML = `<img src="obrazek.jpg" alt="Krzysztof Łukasiński"><p>${input}</p>`;
+        chat.appendChild(newMessage);
+        document.getElementById("messageInput").value = "";
+        
+    }
+</script>
+
+</body>
+</html>
