@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Georgia;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#mainik {
+  display: flex;
+}
+
+#lewygora,
+#srodkowygora {
+  background: #A26475;
+  color: white;
+  width: 30%;
+  height: 300px;
+}
+
+#prawygora {
+  background: #A26475;
+  color: white;
+  width: 40%;
+  height: 300px;
+  text-align: right;
+}
+
+#ten-nizej {
+  background: #F0EAE2;
+  padding: 50px;
+}
+
+footer {
+  background: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+table,td,th {
+  border: 2px solid #69293A;
+  padding: 7px;
+  border-collapse: collapse;
+}
+
+ul {
+  list-style-type: square;
+}
+#czerwony {
+  background: red;
+  height: 15px;
+}
+
+#zielony {
+  background: green;
+  height: 15px
+}
+
+#niebieski {
+  background: blue;
+  height: 15px;
+}
