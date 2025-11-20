@@ -1,0 +1,18 @@
+<style>
+    .p {
+        color: red;
+    }
+
+</style>
+
+<html>
+    <div id = "box">  </div>
+
+</html>
+<script>
+    const box = document.querySelector("#box");
+    const akapit = document.createElement ("p");    
+    akapit.classList.add("p");
+    akapit.innerHTML = "To jest akapit z dodanym stylem.";
+    box.appendChild(akapit);
+</script>
