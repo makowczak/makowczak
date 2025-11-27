@@ -1,0 +1,18 @@
+<button id ="myButton" >
+    testuj
+    </button>
+    
+    <p id="Demo"></p>
+    <script>
+        let button = document.querySelector("#myButton");
+        button.addEventListener("mouseover",mover);
+        button.addEventListener("click",mclick);
+        function mover()
+        {
+            document.getElementById("#Demo").innerHTML += "over<br>";
+                }
+    function mclick()
+        {
+            document.querySelector("#Demo").innerHTML += "click<br>";
+                }
+    </script>

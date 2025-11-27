@@ -1,0 +1,11 @@
+<p id="tekst">Kliknij mnie</p>
+
+<script>
+    let t = document.querySelector("#tekst");
+    t.addEventListener("click", dodajObramowanie);
+
+    function dodajObramowanie() {
+        t.style.border = "2px solid black";
+        t.style.padding = "5px";
+    }
+</script>

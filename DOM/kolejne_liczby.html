@@ -1,0 +1,11 @@
+<p id="licznik"></p>
+
+<script>
+    let licznik = document.querySelector("#licznik");
+    let n = 0; 
+
+    setInterval(function() {
+        licznik.textContent = n;
+        n++; 
+    }, 1000);
+</script>
