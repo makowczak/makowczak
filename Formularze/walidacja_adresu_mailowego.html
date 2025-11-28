@@ -1,0 +1,26 @@
+<h3>Kontrola adresu mailowego</h3>
+    <form action="write2DB.php" method="post">
+        <label for="fname">Podaj adres email</label>
+        <input type="text" name="fname" id="mail" >
+        <input type="submit" value="Wyślij" id="send">
+</form>
+    <p id="wynik"></p>
+<script>
+    document.querySelector("#send").addEventListener("click", checkMail);
+function checkMail(event) {
+    event.preventDefault(); 
+
+    var mailText = document.querySelector("#mail").value;
+    var reg_email = /[\w\-\.]+@([A-Za-z0-9\-]+\.)+[A-Za-z0-9]/;
+
+    let position = mailText.search(reg_email);
+
+    if (position === 0) {
+        document.querySelector("#wynik").textContent = "Poprawny email";
+        document.querySelector("#wynik").style.color = "green";
+    } else {
+        document.querySelector("#wynik").textContent = "Zły email";
+        document.querySelector("#wynik").style.color = "red";
+}
+}
+</script>

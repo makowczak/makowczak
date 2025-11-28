@@ -1,0 +1,12 @@
+R <input type="range" min="0" max="255" id="r">
+G <input type="range" min="0" max="255" id="g">
+B <input type="range" min="0" max="255" id="b">
+
+<p id="t">Kolor tekstu</p>
+
+<script>
+function zmien() {
+    t.style.color = `rgb(${r.value},${g.value},${b.value})`;
+}
+r.oninput = g.oninput = b.oninput = zmien;
+</script>
